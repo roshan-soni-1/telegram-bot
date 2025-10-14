@@ -5,7 +5,7 @@ let providers = {};
 async function loadProviders() {
   try {
 //    const res = await fetch("http://localhost:3000/chat/providers");
-    const res = await fetch((process.env.MODE=="development")?"http://localhost:3000/chat/providers":`${process.env.API_URL}/chat/provider`);
+    const res = await fetch((process.env.MODE=="development")?"http://localhost:3000/chat/providers":`${process.env.API_URL}/chat/providers`);
     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     const data = await res.json();
 
