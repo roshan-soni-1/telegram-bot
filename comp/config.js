@@ -1,6 +1,7 @@
+
 module.exports = {
-  TOKEN: "7403422365:AAHICRhay9CGwiYqPmu6UK_6Q_Llk91QmAU",
-  API_URL: "http://localhost:3000/chat",
-  DEFAULT_MODEL: "gemma2-9b-it",
+  TOKEN: process.env.TOKEN,
+  API_URL: (process.env.MODE=="development")?"http://localhost:3000/chat":`${process.env.API_URL}/chat`,
+  DEFAULT_MODEL: process.env.DEFAULT_MODEL,
   MAX_HISTORY_LENGTH: 30
 };

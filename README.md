@@ -56,13 +56,21 @@ npm install node-telegram-bot-api
 
 3. Create a bot via `BotFather` and get your bot token.
 
-4. Update your token in index.js:
+4. Update your token in .env:
 
 ```bash
 const TOKEN = 'YOUR_FULL_BOT_TOKEN';
 ```
 
 ---
+# env file setup
+```txt
+const TOKEN = 'YOUR_FULL_BOT_TOKEN';
+MODE=development
+API_URL=https://yourapiurl
+DEFAULT_MODEL=llama-3.1-8b-instant
+```
+
 ## install backend 
 
 To run this bot you need to install [this repository](https://github.com/roshan-soni-1/chatbot-backend).

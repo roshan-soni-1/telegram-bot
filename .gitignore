@@ -1,3 +1,4 @@
 node_modules/
 Local/
 comp/chat.log
+.env

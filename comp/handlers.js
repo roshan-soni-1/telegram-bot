@@ -32,7 +32,7 @@ function registerHandlers(bot) {
 
       const model = history.selectedModel || DEFAULT_MODEL;
 
-      const response = await fetch("http://localhost:3000/chat", {
+      const response = await fetch(process.env.MODE=="development"?"http://localhost:3000/chat":`${process.env.API_URL}/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ model, messages: history.messages }),

@@ -1,4 +1,7 @@
+
 const TelegramBot = require("node-telegram-bot-api");
+const dotenv = require('dotenv')
+dotenv.config()
 const { TOKEN } = require("./comp/config");
 const { loadProviders } = require("./comp/providers");
 const { registerCommands } = require("./comp/commands");
