@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "old": "node bot.js",
-    "start": "nodemon cbot.js"
+    "dev": "nodemon cbot.js",
+    "start": "node cbot.js"
   },
   "author": "roshan",
   "license": "ISC",
