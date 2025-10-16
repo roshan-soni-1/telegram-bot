@@ -1,142 +1,171 @@
-# 🤖✨ Telegram AI Model Selector Bot
+# 🤖 TELEGRAM-BOT
 
-![Node.js](https://img.shields.io/badge/Node.js-v18-green)
-![License](https://img.shields.io/badge/License-MIT-blue)
-![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+*Empowering Seamless AI Conversations Everywhere*
 
-
-A Node.js Telegram bot that lets users choose AI providers and models via inline buttons, and also responds to messages like greetings.
-
----
-## Table of Contents
-
-- [features](#features)
-- [requirement](#requirement)
-- [installation](#installation)
-- [file overview](#file-overview)
-- [debugging](#debugging)
----
-
-
-# 🚀 Features
-
-🏁 /start — Welcome message.
-
-🧩 /model — Select AI providers and models.
-
-🎛️ Inline buttons for providers and models.
-
-💬 Responds to messages like "hii" or "hi".
-
-📝 Console logs all interactions for debugging.
+![last-commit](https://img.shields.io/github/last-commit/roshan-soni-1/telegram-bot?style=flat\&logo=git\&logoColor=white\&color=0080ff)
+![repo-top-language](https://img.shields.io/github/languages/top/roshan-soni-1/telegram-bot?style=flat\&color=0080ff)
+![repo-language-count](https://img.shields.io/github/languages/count/roshan-soni-1/telegram-bot?style=flat\&color=0080ff)
 
 ---
 
-> 🛠️ Requirements
+### 🧰 Tech Stack & Tools
 
- ⚡ Node.js >= 18
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat\&logo=JavaScript\&logoColor=black)
+![npm](https://img.shields.io/badge/npm-CB3837.svg?style=flat\&logo=npm\&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4.svg?style=flat\&logo=Axios\&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000.svg?style=flat\&logo=JSON\&logoColor=white)
+![Markdown](https://img.shields.io/badge/Markdown-000000.svg?style=flat\&logo=Markdown\&logoColor=white)
+![dotenv](https://img.shields.io/badge/.ENV-ECD53F.svg?style=flat\&logo=dotenv\&logoColor=black)
 
- 📦 npm
+---
+
+## 📖 Table of Contents
+
+* [Overview](#overview)
+* [Features](#features)
+* [Getting Started](#getting-started)
+
+  * [Prerequisites](#prerequisites)
+  * [Installation](#installation)
+  * [Configuration](#configuration)
+  * [Usage](#usage)
+  * [Testing](#testing)
+* [Folder Structure](#folder-structure)
+* [Contributing](#contributing)
+* [License](#license)
 
 ---
 
-# 📦 Installation
+## 💡 Overview
 
-1. Clone the repository:
-```bash
-git clone https://github.com/roshan-soni-1/telegram-bot
-```
-```bash
-cd telegram-bot
-```
-2. Install dependencies:
-```bash
-npm install node-telegram-bot-api
-```
+**telegram-bot** is a flexible and intelligent framework for creating AI-powered Telegram bots.
+It enables seamless user interaction with multiple AI providers, supports real-time communication, and offers dynamic configuration and personalization features.
 
-3. Create a bot via `BotFather` and get your bot token.
-
-4. Update your token in .env:
-
-```bash
-const TOKEN = 'YOUR_FULL_BOT_TOKEN';
-```
+Whether you’re building a conversational AI assistant, a multi-provider chatbot, or a custom automation bot — **telegram-bot** provides the foundation to get started quickly.
 
 ---
-# env file setup
-```txt
-const TOKEN = 'YOUR_FULL_BOT_TOKEN';
-MODE=development
-API_URL=https://yourapiurl
-DEFAULT_MODEL=llama-3.1-8b-instant
-```
 
-## install backend 
+## ✨ Features
 
-To run this bot you need to install [this repository](https://github.com/roshan-soni-1/chatbot-backend).
+* 🎯 **Inline Keyboards:** Interactive options for AI provider or model selection directly in chat.
+* ⚙️ **Real-Time Messaging:** Smooth and responsive user experience with Telegram Bot API polling.
+* 🔧 **Dynamic Provider Management:** Auto-fetch and update AI model configurations.
+* 💾 **User State Management:** Maintain personalized chat histories and preferences.
+* 🧠 **AI Provider Integration:** Easily connect to multiple AI APIs for diverse responses.
+* 🛠️ **Logging & Debugging Tools:** Built-in system for error tracking and activity monitoring.
 
-1. clone backend repository
-```bash
-git clone https://github.com/roshan-soni-1/chatbot-backend
-```
-2. start backend server 
+---
+
+## 🚀 Getting Started
+
+### 🧱 Prerequisites
+
+Make sure you have the following installed on your system:
+
+* [Node.js](https://nodejs.org/) (v16 or above)
+* [npm](https://www.npmjs.com/)
+
+---
+
+### ⚙️ Installation
+
+1. **Clone this repository**
+
+   ```bash
+   git clone https://github.com/roshan-soni-1/telegram-bot
+   ```
+
+2. **Navigate into the directory**
+
+   ```bash
+   cd telegram-bot
+   ```
+
+3. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+---
+
+### 🔑 Configuration
+
+1. Create a `.env` file in the project root.
+2. Add your credentials:
+
+   ```env
+   TELEGRAM_BOT_TOKEN=your_telegram_token_here
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+> 💡 Tip: You can get a Telegram Bot token from [@BotFather](https://t.me/BotFather).
+
+---
+
+### ▶️ Usage
+
+Run the bot:
+
 ```bash
 npm start
 ```
 
-
-🏃 Usage
-
-Run the bot:
-
-node index.js
-
-In Telegram:
-
-1. Send `/start` to the bot.
-
-2. Use `/model` to pick a provider.
-
-3. Click inline buttons to select a model.
-
-4. Say "hii" or "hi" and the bot will reply.
+Once the bot is running, open Telegram and search for your bot username.
+Start chatting and experience real-time AI conversations!
 
 ---
 
-# 📂 file-overview
+### 🧪 Testing
 
-cbot.js — Main bot logic
+Run the test suite:
 
-package.json — Dependencies
+```bash
+npm test
+```
 
----
-
-* 🔍 Debugging
-
-Logs all user messages and callback queries.
-
-Tracks chat IDs, selected providers, and models.
+> Default test framework: `{test_framework}`
+> You can customize the test environment inside the `tests/` folder.
 
 ---
 
-💡 Notes
+## 📁 Folder Structure
 
-✅ Selected provider shows a checkmark automatically.
-
-model_ prefix is used for model buttons to handle callbacks correctly.
-
-> Ensure your bot token is valid to avoid *ETELEGRAM: 404 Not Found*.
+```
+telegram-bot/
+├── src/
+│   ├── bot.js           # Main bot logic
+│   ├── config.js        # Environment setup & constants
+│   ├── handlers/        # Message and command handlers
+│   ├── services/        # AI provider integrations
+│   └── utils/           # Helper functions
+├── .env.example         # Example environment variables
+├── package.json         # Dependencies & scripts
+├── README.md            # Project documentation
+└── LICENSE              # License info
+```
 
 ---
 
-📜 License
+## 🤝 Contributing
 
-MIT License
+Contributions are always welcome!
+
+1. Fork the repo
+2. Create your feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
 
 ---
 
-👤 Author
+## 📜 License
 
-Roshan Soni
+This project is licensed under the **MIT License** — feel free to use and modify it as needed.
 
-📨 Contact: Telegram handle or email if needed
+---
+
+### 🌐 Connect
+
+Developed with ❤️ by **[Roshan Soni](https://github.com/roshan-soni-1)**
+[⬆ Back to Top](#telegram-bot)
